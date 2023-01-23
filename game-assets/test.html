@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<style>
+		#main{
+			background-image: url('animation.png');
+			width: 361px;
+    		height: 348px;
+    		background-position: -361px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<!-- <button onclick="change()">Change</button> -->
+	</div>
+	<script>
+		var i=0, j=0;
+		var intervalID = setInterval("change()", 10);
+		function change(){
+			i++;
+			console.log(i);
+			console.log(j);
+			if(i<13){
+				console.log(""+(-361 * i)+"px " + (j * -348) +"px");
+				document.getElementById('main').style.backgroundPosition = ""+(-361 * i)+"px " + (j * -348) +"px";
+			}
+			else{
+				i=0;
+				j++;
+				if(j>=7)
+					j=0;
+			}
+		}
+	</script>
+	
+</body>
+</html>
