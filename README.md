@@ -2,6 +2,10 @@
 
 ![](./Interface.png)
 
+## Animation from static Image
+
+![](./public/images/animation.png)
+
 ## Project setup
 ```
 npm install
